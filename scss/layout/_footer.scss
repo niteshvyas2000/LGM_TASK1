@@ -1,0 +1,52 @@
+#main-footer {
+  background: $colour-primary-dark;
+  color: $colour-white;
+  height: 17rem;
+  letter-spacing: 2px;
+  @include respond(phone) {
+    height: 26rem;
+  }
+
+  .elevator {
+    cursor: pointer;
+    text-align: center;
+    padding: 2rem 0;
+    a {
+      color: $colour-medium-grey;
+      transition: all 0.25s;
+      &:hover {
+        color: $colour-white;
+        transform: translate(1rem);
+        p {
+          opacity: 1;
+        }
+      }
+      p {
+        opacity: 0;
+      }
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    .social {
+      @include respond(phone) {
+        padding: 2rem;
+      }
+      a {
+        padding: 0 2rem;
+        color: $colour-white;
+        &:hover {
+          color: $colour-secondary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
